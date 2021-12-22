@@ -73,14 +73,14 @@ function create() {
    */
   player = this.physics.add.sprite(
     400, // x position
-    650, // y position
+    600, // y position
     'paddle', // key of image for the sprite
   );
 
   // Let's add the ball
   ball = this.physics.add.sprite(
     400, // x position
-    615, // y position
+    570, // y position
     'ball' // key of image for the sprite
   );
 
