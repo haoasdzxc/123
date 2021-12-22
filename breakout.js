@@ -54,11 +54,11 @@ const game = new Phaser.Game(config);
  * loaded as key value pairs, we reference the assets by their keys of course
  */
 function preload() {
-  this.load.image('ball', 'assets/images/ball_32_32.png');
-  this.load.image('paddle', 'assets/images/paddle_128_32.png');
-  this.load.image('brick1', 'assets/images/brick1_64_32.png');
-  this.load.image('brick2', 'assets/images/brick2_64_32.png');
-  this.load.image('brick3', 'assets/images/brick3_64_32.png');
+  this.load.image('ball', 'ball.png');
+  this.load.image('paddle', 'paddle.png');
+  this.load.image('brick1', 'brick1.png');
+  this.load.image('brick2', 'brick2.png');
+  this.load.image('brick3', 'brick3.png');
 }
 
 /**
@@ -73,50 +73,50 @@ function create() {
    */
   player = this.physics.add.sprite(
     400, // x position
-    600, // y position
+    650, // y position
     'paddle', // key of image for the sprite
   );
 
   // Let's add the ball
   ball = this.physics.add.sprite(
     400, // x position
-    565, // y position
+    615, // y position
     'ball' // key of image for the sprite
   );
 
   // Add violet bricks
   violetBricks = this.physics.add.group({
     key: 'brick1',
-    repeat: 9,
+    repeat: 8,
     immovable: true,
     setXY: {
       x: 80,
       y: 140,
-      stepX: 70
+      stepX: 80
     }
   });
 
   // Add yellow bricks
   yellowBricks = this.physics.add.group({
     key: 'brick2',
-    repeat: 9,
+    repeat: 8,
     immovable: true,
     setXY: {
       x: 80,
       y: 90,
-      stepX: 70
+      stepX: 80
     }
   });
 
   // Add red bricks
   redBricks = this.physics.add.group({
     key: 'brick3',
-    repeat: 9,
+    repeat: 8,
     immovable: true,
     setXY: {
       x: 80,
       y: 40,
-      stepX: 70
+      stepX: 80
     }
   });
 
